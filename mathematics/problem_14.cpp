@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void SeiveOfEratosthenes(int N)
+void SieveOfEratosthenes(int N)
 {
     if (N <= 1)
         return;
@@ -31,7 +31,7 @@ int main()
     int num;
     cin >> num;
 
-    SeiveOfEratosthenes(num);
+    SieveOfEratosthenes(num);
 
     return 0;
 }
