@@ -1,0 +1,43 @@
+Mathematics:
+
+1. Count digits -> Iterative, O(log(N))
+2. Count digits -> Closed form solution + Library functions, O(?): Implementation dependent
+3. Palindrome number -> O(log(N))
+
+17. Absolute value -> O(1)
+18. Celcius to Fahrenheit -> O(1)
+19. Roots of quadratic quation -> O(log(D))
+22. Nth term of GP -> O(log(N))
+
+4. Factorial -> Iterative, int (Max N = 12), O(N)
+20. Factorial -> Iterative, long long (Max N = 20), O(N)
+5. Count trailing zeros in factorial -> Iterative, Legendre's formula, O(log(N))
+21. Digits in factorial -> Iterative, O(N*logN)
+31. Digits in factorial -> Stirling's approximation, O(?): Implementation dependent
+33. Factorial of large positive integers -> 
+
+6. GCD -> Naive, O(min(a, b))
+7. GCD -> Iterative Euclid's algorithm (difference), O(log(min(a, b)))
+8. GCD -> Iterative Euclid's algorithm (modulus), O(log(min(a, b)))
+9. LCM -> Naive, O(a * b)
+10. LCM -> Using Iterative Euclid's algorithm (modulus), O(log(min(a, b)))
+29. Binary GCD (Stein's algorithm) -> Iterative
+30. Binary GCD (Stein's algorithm) -> Iterative, Less optimized
+
+11. Primality test -> O(sqrt(N))
+12. Prime factorization -> O(sqrt(N))
+13. Positive divisors -> O(sqrt(N))
+14. Sieve of Eratosthenes -> O(N*lnln(N)) time, O(N) space
+32. Segmented Sieve -> 
+
+23. Has 3 positive divisors -> Naive, O(sqrt(N))
+24. Has 3 positive divisors -> Efficient, O(log(N)) + O(N^0.25) = O(N^0.25)
+25. All numbers with 3 positive divisors till N -> Naive, O(N * N^0.25)
+26. All numbers with 3 positive divisors till N -> Efficient, O(N^0.5 * N^0.25)
+
+15. Power -> Iterative Naive, O(exponent) 
+16. Binary exponentiation -> Iterative, O(log(exponent))
+
+27. Addition under modulo -> O(1): Assuming modulo is O(1)
+28. Multiplication under modulo -> O(1): Assuming modulo is O(1)
+34. Modular multiplicative inverse ->
