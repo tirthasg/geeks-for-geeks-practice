@@ -25,5 +25,7 @@ int main()
     int result = MissingNumber(arr, N);
     cout << result << endl;
 
+    delete [] arr;
+
     return 0;
 }

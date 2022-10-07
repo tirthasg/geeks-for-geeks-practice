@@ -34,5 +34,7 @@ int main()
 
     FindOddOccuringElements(arr, N);
 
+    delete [] arr;
+
     return 0;
 }

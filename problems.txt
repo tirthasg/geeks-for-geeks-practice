@@ -64,6 +64,6 @@ Bitwise operators
 13. Variation of Q12: Find missing number in array -> O(N)
 15. XOR of numbers from 1 to N -> O(1)
 16. Variation of Q12: Find missing number in array -> optimized, O(N)
-
 14. Find the only two elements occuring odd no. of times in an array -> O(N) 
 
+17. Generate power set of an array using Bitwise operators -> O(2^N)
