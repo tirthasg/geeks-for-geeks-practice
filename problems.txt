@@ -46,8 +46,10 @@ Mathematics:
 Bitwise operators
 
 1. Set, Clear, Toggle, Check bit and others -> O(1)
+19. Check bit with right shift operator -> O(1)
 2. Binary representation of integers from 1 to 1024 -> O(1)
 3. 1's & 2's complement of an integer -> O(1)
+18. 1's & 2's complement of an integer with fewer operations -> O(1)
 
 4. Right-most significant bit position -> Naive, O(32)
 5. Right-most significant bit position -> Naive, O(32), Checking bit by bit from LSB to MSB, Conceptually same as last approach
@@ -66,4 +68,9 @@ Bitwise operators
 16. Variation of Q12: Find missing number in array -> optimized, O(N)
 14. Find the only two elements occuring odd no. of times in an array -> O(N) 
 
-17. Generate power set of an array using Bitwise operators -> O(2^N)
+17. Generate power set of an array using Bitwise operators -> O(2^N * N)
+
+20. Integer is sparse or not? -> O(1)
+21. Positive integer is sparse or not? -> O(1)
+
+22. Longest Consecutive set bits -> O(1)
