@@ -60,6 +60,8 @@ Bitwise operators
 11. Count set bits for multiple queries -> Look up table method, O(1 + t*1) = O(t) time, O(1) space
 
 9. Is an integer a power of 2? -> O(total set bits)
+24. Is an integer a power of 2? -> O(1)
+
 10. Integers a & b differ by how many bits? -> O(1)
 
 12. Find the only element occuring odd no. of times in an array -> O(N)
@@ -74,3 +76,8 @@ Bitwise operators
 21. Positive integer is sparse or not? -> O(1)
 
 22. Longest Consecutive set bits -> O(1)
+23.
+
+25. Swap even and odd bits in an integer -> O(1)
+
+26. Maximum AND value of elements of array -> O(N^2)
