@@ -53,7 +53,7 @@ Bitwise operators
 
 4. Right-most significant bit position -> Naive, O(32)
 5. Right-most significant bit position -> Naive, O(32), Checking bit by bit from LSB to MSB, Conceptually same as last approach
-6. Right-most significant bit position -> 2's complement idea, O(?), Depends on time complexity of log2()
+6. Right-most significant bit position -> 2's complement idea, O(?), Implementation dependent
 
 7. Count set bits -> Naive, Checking bit by bit from LSB to RSB, O(32)
 8. Count set bits -> Kernighan's algorithm, O(total set bits)
@@ -87,4 +87,4 @@ Bitwise operators
 29. Maximum OR value of elements of array -> O(N^2)
 
 30. Binary to Gray code -> O(1)
-31. Gray code to Binary -> O(32)
+31. Gray code to Binary -> O(31)
