@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 #include <cmath>
 using namespace std;
 
@@ -16,9 +17,15 @@ void BinaryRepresentation(int N)
 
 int RSBPosition(int N)
 {
-    if (!N)
+    if (N == 0)
         return -1;
 
+    if (N == INT_MIN)
+        return sizeof(int) * 8;
+
+    // ~N + 1
+    // -N
+    // ~(N - 1)
     int mask = (~N + 1);
     return log2(N & mask);
 }

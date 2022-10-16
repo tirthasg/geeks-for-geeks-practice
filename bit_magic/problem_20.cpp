@@ -12,23 +12,28 @@ void BinaryRepresentation(int N)
     cout << endl;
 }
 
+// bool IsSparse(int N)
+// {
+//     int size = sizeof(int) * 8;
+    
+//     int i = 0;
+//     int j = 1;
+//     while (j < size) {
+//         int b1 = (N & (1 << i)) ? 1 : 0;
+//         int b2 = (N & (1 << j)) ? 1 : 0;
+//         if (b1 & b2)
+//             return false;
+        
+//         i++;
+//         j++;
+//     }
+
+//     return true;
+// }
+
 bool IsSparse(int N)
 {
-    int size = sizeof(int) * 8;
-    
-    int i = 0;
-    int j = 1;
-    while (j < size) {
-        int b1 = (N & (1 << i)) ? 1 : 0;
-        int b2 = (N & (1 << j)) ? 1 : 0;
-        if (b1 & b2)
-            return false;
-        
-        i++;
-        j++;
-    }
-
-    return true;
+    return (N & (N << 1)) == 0;
 }
 
 int main()

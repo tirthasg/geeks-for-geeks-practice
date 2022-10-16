@@ -47,13 +47,13 @@ Bitwise operators
 
 1. Set, Clear, Toggle, Check bit and others -> O(1)
 19. Check bit with right shift operator -> O(1)
-2. Binary representation of integers from 1 to 1024 -> O(1)
+2. Binary representation of integers from 1 to N -> O(32 * N)
 3. 1's & 2's complement of an integer -> O(1)
 18. 1's & 2's complement of an integer with fewer operations -> O(1)
 
 4. Right-most significant bit position -> Naive, O(32)
 5. Right-most significant bit position -> Naive, O(32), Checking bit by bit from LSB to MSB, Conceptually same as last approach
-6. Right-most significant bit position -> 2's complement idea, O(?)
+6. Right-most significant bit position -> 2's complement idea, O(?), Depends on time complexity of log2()
 
 7. Count set bits -> Naive, Checking bit by bit from LSB to RSB, O(32)
 8. Count set bits -> Kernighan's algorithm, O(total set bits)
@@ -62,7 +62,7 @@ Bitwise operators
 9. Is an integer a power of 2? -> O(total set bits)
 24. Is an integer a power of 2? -> O(1)
 
-10. Integers a & b differ by how many bits? -> O(1)
+10. Integers a & b differ by how many bits? -> O(total set bits in a ^ b)
 
 12. Find the only element occuring odd no. of times in an array -> O(N)
 13. Variation of Q12: Find missing number in array -> O(N)
@@ -75,9 +75,16 @@ Bitwise operators
 20. Integer is sparse or not? -> O(1)
 21. Positive integer is sparse or not? -> O(1)
 
-22. Longest Consecutive set bits -> O(1)
-23.
+22. Longest Consecutive set bits -> O(32)
+23. Longest Consecutive set bits -> O(length of longest consecutive set bits)
 
-25. Swap even and odd bits in an integer -> O(1)
+25. Swap even and odd bits in an integer -> O(32), Can be reduced to O(1) by using values for masks directly
 
 26. Maximum AND value of elements of array -> O(N^2)
+27. Maximum AND value of elements of array -> O(32 * N)
+
+28. Maximum OR value of elements of array -> O(N)
+29. Maximum OR value of elements of array -> O(N^2)
+
+30. Binary to Gray code -> O(1)
+31. Gray code to Binary -> O(32)

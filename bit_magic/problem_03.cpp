@@ -20,6 +20,9 @@ void OnesComplement(int &N)
 
 void TwosComplement(int &N)
 {
+    // -N
+    // ~N + 1
+    // ~(N - 1)
     OnesComplement(N);
     N++;
 }

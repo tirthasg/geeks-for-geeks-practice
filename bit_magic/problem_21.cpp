@@ -15,7 +15,7 @@ void BinaryRepresentation(int N)
 
 bool IsSparse(int N)
 {
-    return !(N & (N >> 1));
+    return (N & (N >> 1)) == 0;
 }
 
 int main()

@@ -3,6 +3,8 @@ using namespace std;
 
 int SwapEvenOddBits(int N)
 {
+    // Even mask -> 0x55555555
+    // Odd mask -> 0xAAAAAAAA
     int even_mask = 0;
     
     int size = sizeof(int) * 8;

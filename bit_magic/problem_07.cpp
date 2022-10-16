@@ -15,7 +15,7 @@ void BinaryRepresentation(int N)
 
 int CountSetBits(int N)
 {
-    if (!N)
+    if (N == 0)
         return 0;
 
     int count = 0;

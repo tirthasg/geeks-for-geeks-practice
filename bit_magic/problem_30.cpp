@@ -3,7 +3,6 @@ using namespace std;
 
 void BinaryRepresentation(int N)
 {
-    cout << "Binary representation of " << N << ": ";
     int size = sizeof(int) * 8;
     for (int pos = size - 1; pos >= 0; pos--) {
         int mask = (1 << pos);
@@ -12,26 +11,20 @@ void BinaryRepresentation(int N)
     cout << endl;
 }
 
-int LongestConsecutiveSetBits(int N)
+int BinaryToGray(int N)
 {
-    int count = 0;
-    while (N) {
-        count++;
-        N &= (N << 1);
-    }
-
-    return count;
+    return N ^ (N >> 1);
 }
 
 int main()
 {
-    int num;
-    cin >> num;
+    int N;
+    cin >> N;
+    BinaryRepresentation(N);
 
-    BinaryRepresentation(num);
-
-    int result = LongestConsecutiveSetBits(num);
+    int result = BinaryToGray(N);
     cout << result << endl;
+    BinaryRepresentation(result);
 
     return 0;
 }
