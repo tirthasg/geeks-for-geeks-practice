@@ -1,24 +1,20 @@
 #include <iostream>
-#include <cstring>
 using namespace std;
 
-bool IsPalindrome(char str[], int start, int end)
+int SumOfNaturals(int N)
 {
-    if (start >= end)
-        return true;
+    if (N == 0)
+        return 0;
 
-    if (str[start] != str[end])
-        return false;
-    
-    return IsPalindrome(str, start + 1, end - 1);
+    return N + SumOfNaturals(N - 1);
 }
 
 int main()
 {
-    char str[100];
-    cin >> str;
+    int N;
+    cin >> N;
 
-    bool result = IsPalindrome(str, 0, strlen(str) - 1);
+    int result = SumOfNaturals(N);
     cout << result << endl;
 
     return 0;

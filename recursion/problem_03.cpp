@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int SumOfNaturals(int N)
+int Factorial(int N)
 {
     if (N == 0)
-        return 0;
-
-    return N + SumOfNaturals(N - 1);
+        return 1;
+        
+    return N * Factorial(N - 1);
 }
 
 int main()
@@ -14,8 +14,8 @@ int main()
     int N;
     cin >> N;
 
-    int result = SumOfNaturals(N);
+    int result = Factorial(N);
     cout << result << endl;
-
+    
     return 0;
 }

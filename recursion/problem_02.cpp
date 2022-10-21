@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void PrintOneToN(int N)
+void PrintDecreasing(int N)
 {
     if (N == 0)
         return;
         
-    PrintOneToN(N - 1);
+    PrintDecreasing(N - 1);
     cout << N << " ";
 }
 
@@ -15,6 +15,6 @@ int main()
     int N;
     cin >> N;
 
-    PrintOneToN(N);
+    PrintDecreasing(N);
     return 0;
 }
