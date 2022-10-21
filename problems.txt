@@ -88,3 +88,13 @@ Bitwise operators
 
 30. Binary to Gray code -> O(1)
 31. Gray code to Binary -> O(31)
+
+
+Recursion
+
+1. Print N to 1 
+2. Print 1 to N 
+3. Sum of first N natural numbers 
+4. Is the string a palindrome? 
+5. Linear Search
+6. Subsequences of a string
