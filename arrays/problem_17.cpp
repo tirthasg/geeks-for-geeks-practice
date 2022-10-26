@@ -1,67 +1,32 @@
 #include <iostream>
+#include <map>
 using namespace std;
 
-void PrintArray(int arr[], int N)
+void FindFrequencies(int arr[], int N)
 {
-    if (N == 0) {
-        cout << "Array is empty" << endl;
-        return;
-    }
-    
+    map<int, int> frequency;
     for (int i = 0; i < N; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+        if (frequency.count(arr[i]))
+            frequency[arr[i]]++;
+        else 
+            frequency[arr[i]] = 1;
+
+    for (auto kvp : frequency)
+        cout << kvp.first << " " << kvp.second << endl;
 }
 
-int Insert(int arr[], int size, int capacity, int value)
+int main()
 {
-    if (size == capacity) {
-        cout << "Array is full" << endl;
-        return size;
-    }
-        
-    arr[size] = value;
+    int N;
+    cin >> N;
 
-    return size + 1;
-}
+    int *arr = new int[N];
+    for (int i = 0; i < N; i++)
+        cin >> arr[i];
 
-int Delete(int arr[], int size, int capacity)
-{
-    if (size == 0) {
-        cout << "Array is empty" << endl;
-        return size;
-    }
-    
-    return size - 1;
-}
+    FindFrequencies(arr, N);
 
-int main() {
-    int capacity;
-    cin >> capacity;
-
-    int *arr = new int[capacity];
-
-    int t;
-    cin >> t;
-
-    int size = 0;
-    while (t != 0) {
-        int value;
-        cin >> value;
-
-        size = Insert(arr, size, capacity, value);
-        PrintArray(arr, size);
-
-        t--;
-    }
-
-    cin >> t;
-    while (t != 0) {
-        size = Delete(arr, size, capacity);
-        PrintArray(arr, size);
-
-        t--;
-    }
+    delete [] arr;
 
     return 0;
 }
