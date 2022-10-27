@@ -7,57 +7,35 @@ void PrintArray(int arr[], int N)
         cout << "Array is empty" << endl;
         return;
     }
-
+    
     for (int i = 0; i < N; i++)
         cout << arr[i] << " ";
     cout << endl;
 }
 
-int Insert(int arr[], int size, int capacity, int index, int value)
+int Insert(int arr[], int size, int capacity, int value)
 {
     if (size == capacity) {
         cout << "Array is full" << endl;
         return size;
     }
-
-    if (index > size || index < 0) {
-        cout << "Index out of bound" << endl;
-        return size;
-    }
-
-    if (index == size) {
-        arr[index] = value;
-        return size + 1;
-    }
-
-    for (int i = size - 1; i >= index; i--)
-        arr[i + 1] = arr[i];
-    
-    arr[index] = value;
+        
+    arr[size] = value;
 
     return size + 1;
 }
 
-int Delete(int arr[], int size, int capacity, int index)
+int Delete(int arr[], int size, int capacity)
 {
     if (size == 0) {
         cout << "Array is empty" << endl;
         return size;
     }
-
-    if (index >= size || index < 0) {
-        cout << "Index out of bound" << endl;
-        return size;
-    }
-
-    for (int i = index; i < size - 1; i++)
-        arr[i] = arr[i + 1];
     
     return size - 1;
 }
 
-int main()
-{
+int main() {
     int capacity;
     cin >> capacity;
 
@@ -68,10 +46,10 @@ int main()
 
     int size = 0;
     while (t != 0) {
-        int index, value;
-        cin >> index >> value;
+        int value;
+        cin >> value;
 
-        size = Insert(arr, size, capacity, index, value);
+        size = Insert(arr, size, capacity, value);
         PrintArray(arr, size);
 
         t--;
@@ -79,10 +57,7 @@ int main()
 
     cin >> t;
     while (t != 0) {
-        int index;
-        cin >> index;
-
-        size = Delete(arr, size, capacity, index);
+        size = Delete(arr, size, capacity);
         PrintArray(arr, size);
 
         t--;
